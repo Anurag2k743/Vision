@@ -36,24 +36,19 @@ const Dashboard = () => {
     <>
       {/* -------------Header section------------ */}
 
-<header className="">
-  <div
-    className={`fixed top-2 z-50   md:w-[70%] lg:w-[76%] xl:w-[79%] 2xl:w-[80%]  rounded-3xl transition-all duration-300 
+  <header
+    className={`fixed border  left-5 right-5 top-2 md:left-[280px] md:right-5 z-50  rounded-3xl transition-all duration-300 
       ${isScrolled ? 'border border-[#ffffff] backdrop-blur-xl' : 'border-none backdrop-blur-none'}
     `}>
     <Navbar />
-  </div>
-</header>
-
-
-
+  </header>
 
 
       {/* -------------Header section------------ */}
 
       {/* -----------------today's money---------------- */}
 
-      <div className='grid  sm:grid-cols-2  xl:grid-cols-4  gap-3 mt-[70px]'>
+      <div className='grid  sm:grid-cols-2  xl:grid-cols-4  gap-3 mt-[75px]'>
 
         <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl flex justify-between mt-2'>
           <div className=''>
