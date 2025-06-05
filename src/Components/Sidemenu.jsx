@@ -31,7 +31,7 @@ const Sidemenu = () => {
         key={item.to}
         to={item.to}
         className={({ isActive }) =>
-          `flex items-center gap-2 py-3 px-4 rounded-xl transition-all ${isActive ? 'bg-[#1a1f37] text-white' : 'text-white'
+          `flex items-center gap-3 py-3 px-4 rounded-xl transition-all w-full max-w-2xl ${isActive ? 'bg-[#1a1f37] text-white' : 'text-white'
           }`
         } >
 
@@ -49,9 +49,8 @@ const Sidemenu = () => {
     );
   };
   return (
-    <div className=' py-3  fixed z-50 w-[260px] hidden md:block overflow-y-scroll'>
-
-      <div className=' p-5 rounded-lg flex flex-col justify-between gap-32'>
+    <div className=' py-3 z-50 w-[260px] hidden md:block '>
+      <div className=' p-10 fixed rounded-lg flex flex-col justify-between gap-32'>
         <div>
           <div>
             <div className='flex justify-center'>
@@ -59,7 +58,7 @@ const Sidemenu = () => {
             </div>
             <hr className="h-[1px] border-0 bg-gradient-to-r from-transparent via-white to-transparent mt-3" />
             {/* Menu Section */}
-            <div className='space-y-2 mt-5 text-[14px]'>
+            <div className='space-y-2 mt-5 text-[14px] w-[222px]'>
               {menuItems.map(renderNavItem)}
             </div>
 

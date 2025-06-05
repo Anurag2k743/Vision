@@ -27,7 +27,6 @@ const Dashboard = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20); // adjust scroll threshold if needed
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -36,12 +35,19 @@ const Dashboard = () => {
   return (
     <>
       {/* -------------Header section------------ */}
-      <header
-        className={`fixed top-3  z-50 transition-all  duration-0 rounded-3xl md:w-[85%]   
-          ${isScrolled ? 'border border-[#ffffff] backdrop-blur-xl' : 'border-none backdrop-blur-none'
-          }`}>
-        <Navbar />
-      </header>
+
+<header className="">
+  <div
+    className={`fixed top-2 z-50   md:w-[70%] lg:w-[76%] xl:w-[79%] 2xl:w-[80%]  rounded-3xl transition-all duration-300 
+      ${isScrolled ? 'border border-[#ffffff] backdrop-blur-xl' : 'border-none backdrop-blur-none'}
+    `}>
+    <Navbar />
+  </div>
+</header>
+
+
+
+
 
       {/* -------------Header section------------ */}
 

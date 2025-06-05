@@ -9,6 +9,7 @@ import Sidemenu from './Sidemenu';
 import Profile from './Profile';
 import Signin from './Signin';
 import Signup from './Signup';
+import { div } from 'framer-motion/client';
 
 const Layout = () => {
   const location = useLocation();
@@ -19,8 +20,13 @@ const Layout = () => {
 
   return (
     <div className="flex min-h-screen">
-      {shouldShowSidebar && <Sidemenu />}
-      <div className={shouldShowSidebar ? 'p-5 md:ml-[258px] w-full' : 'p-5 w-full'}>
+      {shouldShowSidebar && 
+      <div>
+         <Sidemenu />
+      </div>
+     
+      }
+      <div className={shouldShowSidebar ? 'mt-7 sm:mt-0 p-5 w-full' : 'p-5 w-full'}>
         <Routes>
           {/* Redirect root to /Dashboard */}
           <Route path="/" element={<Navigate to="/Dashboard" replace />} />
