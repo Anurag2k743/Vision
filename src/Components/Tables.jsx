@@ -24,7 +24,7 @@ const Tables = () => {
         <Navbar />
       </header>
 
-      <div className='mt-[75px] overflow-x-auto w-full rounded-2xl' style={{
+      <div className='mt-[85px] md:mt-[75px] overflow-x-auto w-full rounded-2xl' style={{
         background: 'linear-gradient(127.09deg, rgba(6, 11, 40, 0.94) 19.41%, rgba(10, 14, 35, 0.49) 76.65%)'
       }}>
         <AuthorsTable />
