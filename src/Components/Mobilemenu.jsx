@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { FaHome } from "react-icons/fa";
 import { VscGraph } from "react-icons/vsc";
 import { FaMoneyBills } from "react-icons/fa6";
@@ -7,10 +7,23 @@ import { HiMiniWrenchScrewdriver } from "react-icons/hi2";
 import { FaUser } from "react-icons/fa";
 import { MdAssignment } from "react-icons/md";
 import { IoIosRocket } from "react-icons/io";
-import { FaStar } from "react-icons/fa";
-import { MdClose } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
 
-const Mobilemenu = ({ onClose }) => {
+const Sidemenu = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  useEffect(() => {
+
+    if (isOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [isOpen]);
 
   const menuItems = [
     { to: '/Dashboard', label: 'Dashboard', icon: FaHome },
@@ -25,71 +38,45 @@ const Mobilemenu = ({ onClose }) => {
     { to: '/Signup', label: 'Sign Up', icon: HiMiniWrenchScrewdriver },
   ];
 
-  const renderNavItem = (item) => {
-    const Icon = item.icon;
-    return (
-      <NavLink
-        key={item.to}
-        to={item.to}
-        className={({ isActive }) =>
-          `flex items-center gap-3 py-3 px-4 rounded-xl transition-all w-full max-w-2xl ${isActive ? 'bg-[#1a1f37] text-white' : 'text-white' }` } >
-             {({ isActive }) => (
-          <>
-            <div
-              className={`w-7 h-7 p-[6px] rounded-lg flex items-center justify-center transition-all ${isActive ? 'bg-[#0075ff] ' : 'bg-[#1a1f37] '
-                }`}>
-              <Icon />
-            </div>
-            {item.label}
-          </>
-        )}
-      </NavLink>
-    );
-  };
   return (
-    <>
-      <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={onClose} min-hscreen></div>
-      <div className='fixed top-0 left-0 z-50 w-[260px] bg-[#212550] p-6 flex flex-col justify-between transition-transform duration-300 ease-in-out'>
-        <div>
-          <div className='flex justify-between items-center mb-6'>
-            <NavLink to="/dashboard" className='text-[15px] tracking-wider text-white'>VISION UI FREE</NavLink>
-            <button onClick={onClose} aria-label="Close mobile menu" className="text-white text-2xl">
-              <MdClose />
-            </button>
-          </div>
-          <hr className="h-[1px] border-0 bg-gradient-to-r from-transparent via-white to-transparent mt-3 mb-5" />
-          {/* Menu Section */}
-          <div className='space-y-2 text-[14px] w-full'>
-            {menuItems.map(renderNavItem)}
-          </div>
+    <div
+      className={`p-3 fixed top-0 left-0 h-screen w-[230px] sm:w-[260px] z-50 bg-[#0075ff]
+         transform transition-transform duration-500 ease-out ${
+        isOpen ? 'translate-x-0' : '-translate-x-full'
+      }`}>
 
-          {/* Account Section */}
-          <div className=' mt-6'>
-            <h4 className='text-[15px] text-white'>Account Pages</h4>
-          </div>
-
-          <div className='space-y-2 mt-3 text-[14px]'>
-            {accountItems.map(renderNavItem)}
-          </div>
-        </div>
-
-        {/* Footer Section */}
-        <div>
-          <div className="p-3 rounded-xl need">
-            <FaStar className='bg-white h-7 w-7 p-2 text-[#0075FF] rounded-lg' />
-            <div className='my-2'>
-              <h5 className='text-[14px] text-white'>Need help ?</h5>
-              <p className='text-[13px] text-white'>Please Check your docs</p>
-            </div>
-            <button className='px-5 py-3 rounded-lg bg-[#1a1f37] text-[10px] w-full'>DOCUMENTATION</button>
-          </div>
-          <div className='my-3'>
-            <button className='px-5 py-2 bg-blue-400 text-[#ffffff] text-[14px] rounded-lg w-full'>Upgrade to Pro</button>
-          </div>
-        </div>
+      <div className="flex justify-end">
+        <button
+          onClick={() => setIsOpen(false)}
+          className="text-white" >
+          <RxCross2 fontSize={23}/>
+        </button>
       </div>
-    </>
+
+      <div className="flex flex-col mt-5">
+        {menuItems.map((menuItem, index) => (
+          <NavLink
+            key={index}
+            to={menuItem.to}
+            className="text-md mt-2">
+            {menuItem.label}
+          </NavLink>
+        ))}
+      </div>
+
+      <div className="flex flex-col">
+        {accountItems.map((accountItem, index) => (
+          <NavLink
+            key={index}
+            to={accountItem.to}
+            className="text-md tracking-wider  mt-2"
+ >
+            {accountItem.label}
+          </NavLink>
+        ))}
+      </div>
+    </div>
   );
 };
 
-export default Mobilemenu;
+export default Sidemenu;

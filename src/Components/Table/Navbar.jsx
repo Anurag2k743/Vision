@@ -18,9 +18,9 @@ const Navbar = () => {
         <div>
           <div className="flex items-center space-x-2 text-sm text-white/70">
             <FaHome className="text-white" />
-            <span>/ Dashboard</span>
+            <span>/Table</span>
           </div>
-          <h1 className="text-lg font-bold text-white">Dashboard</h1>
+          <h1 className="text-lg font-bold text-white">Table</h1>
         </div>
 
         {/* Right Section */}
