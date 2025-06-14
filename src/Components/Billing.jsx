@@ -1,9 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Navbar from './Billing/Navbar';
-import Visionui from './Billing/Visionui';
 import Vision from './Billing/Vision';
-// import Navbar from './';
 
 const Billing = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +25,6 @@ const Billing = () => {
       </header>
 
           <div className='mt-[85px] md:mt-[74px]'>
-              {/* <Visionui/> */}
               <Vision/>
           </div>
     </>

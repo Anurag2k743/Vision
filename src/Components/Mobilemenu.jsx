@@ -39,43 +39,51 @@ const Sidemenu = () => {
   ];
 
   return (
-    <div
-      className={`p-3 fixed top-0 left-0 h-screen w-[230px] sm:w-[260px] z-50 bg-[#0075ff]
-         transform transition-transform duration-500 ease-out ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      }`}>
 
-      <div className="flex justify-end">
-        <button
-          onClick={() => setIsOpen(false)}
-          className="text-white" >
-          <RxCross2 fontSize={23}/>
-        </button>
+    <>
+
+      <div
+        className={`p-3 fixed top-0 left-0 h-screen w-[230px] sm:w-[260px] z-50 bg-[#0075ff]
+         transform transition-transform duration-500 ease-out ${isOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}>
+
+        <div className="flex justify-end">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-white" >
+            <RxCross2 fontSize={23} />
+          </button>
+        </div>
+        <hr className='mt-3' />
+        <div className='flex justify-center mt-3'>
+          <NavLink to="/dashboard" className='text-[15px] tracking-wider'>VISION UI FREE</NavLink>
+        </div>
+
+        <div className="flex flex-col mt-5 px-10">
+          {menuItems.map((menuItem, index) => (
+            <NavLink
+              key={index}
+              to={menuItem.to}
+              className="text-md mt-2">
+              {menuItem.label}
+            </NavLink>
+          ))}
+        </div>
+
+        <div className="flex flex-col px-10">
+          {accountItems.map((accountItem, index) => (
+            <NavLink
+              key={index}
+              to={accountItem.to}
+              className="text-md tracking-wider  mt-2"
+            >
+              {accountItem.label}
+            </NavLink>
+          ))}
+        </div>
       </div>
 
-      <div className="flex flex-col mt-5">
-        {menuItems.map((menuItem, index) => (
-          <NavLink
-            key={index}
-            to={menuItem.to}
-            className="text-md mt-2">
-            {menuItem.label}
-          </NavLink>
-        ))}
-      </div>
-
-      <div className="flex flex-col">
-        {accountItems.map((accountItem, index) => (
-          <NavLink
-            key={index}
-            to={accountItem.to}
-            className="text-md tracking-wider  mt-2"
- >
-            {accountItem.label}
-          </NavLink>
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 
