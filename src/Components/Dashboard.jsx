@@ -49,9 +49,8 @@ const Dashboard = () => {
 
       {/* -----------------today's money---------------- */}
 
-      <div className='grid  sm:grid-cols-2  xl:grid-cols-4  gap-3 mt-[75px]'>
-
-        <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl flex justify-between mt-2'>
+      <div className='grid  sm:grid-cols-2  xl:grid-cols-4  gap-6 mt-[90px]'>
+        <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl flex justify-between '>
           <div className=''>
             <h6 className='text-[12px]'>Todays Money</h6>
             <span className='font-bold text-[20px]'>$53,000 </span>
@@ -62,7 +61,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl   flex justify-between mt-3'>
+        <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl   flex justify-between'>
           <div className=''>
             <h6 className='text-[12px]'>Today's users</h6>
             <span className='font-bold text-[20px]'>2,300 </span>
@@ -73,7 +72,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl  flex justify-between mt-2'>
+        <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl  flex justify-between'>
           <div className=''>
             <h6 className='text-[12px]'>New clients</h6>
             <span className='font-bold text-[20px]'>+3,462 </span>
@@ -84,7 +83,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl  flex justify-between mt-3'>
+        <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl  flex justify-between'>
           <div className=''>
             <h6 className='text-[12px]'>Total Sales</h6>
             <span className='font-bold text-[20px]'>$103,430 </span>
@@ -101,19 +100,19 @@ const Dashboard = () => {
 
       <div className=' grid grid-cols-12 gap-6'>
 
-        <div className='col-span-12 xl:col-span-12 2xl:col-span-5 p-6 bg-[#0a0e29]  mt-4 Johnson rounded-3xl  h-[350px]'>
+        <div className='col-span-12 xl:col-span-12 2xl:col-span-5 p-6 bg-[#0a0e29]  mt-6 Johnson rounded-3xl h-[260px] sm:h-[350px]'>
           <div className=''>
             <h6 className='text-[14px]'>Welcome back,</h6>
             <h2 className='text-[30px] font-bold'>Mark Johnson</h2>
             <p className='text-[14px] my-3'>Glad to see you again!
               <br />Ask me anything.</p>
           </div>
-          <div className='mt-40'>
+          <div className='mt-16 sm:mt-40'>
             <button className='text-[14px]'>Tap to Record</button>
           </div>
         </div>
 
-        <div className='col-span-12 xl:col-span-6 2xl:col-span-3 h-[350px] mt-0 xl:mt-4  p-5  rounded-2xl bg-[linear-gradient(127.09deg,_rgba(6,11,40,0.94)_19.41%,_rgba(10,14,35,0.49)_76.65%)] '>
+        <div className='col-span-12 xl:col-span-6 2xl:col-span-3 h-[310px] sm:h-[350px] mt-0 xl:mt-6  p-5  rounded-2xl bg-[#0d102d]'>
           <div className='pb-4 '>
             <h4 className='font-bold text-[18px]'>Satisfaction Rate</h4>
             <h6 className='text-[14px]'>From all projects</h6>
@@ -121,7 +120,7 @@ const Dashboard = () => {
           <Satisfaction />
         </div>
 
-        <div className='col-span-12  xl:col-span-6 2xl:col-span-4 sm:h-[350px]   mt-0 xl:mt-4  p-5  rounded-2xl bg-[linear-gradient(127.09deg,_rgba(6,11,40,0.94)_19.41%,_rgba(10,14,35,0.49)_76.65%)]'>
+        <div className='col-span-12  xl:col-span-6 2xl:col-span-4  sm:h-[350px]   mt-0 xl:mt-6  p-5  rounded-2xl bg-[#0d102d]'>
           <div className='w-full flex justify-between items-center gap-5 '>
             <div>
               <h4 className='font-bold text-[18px]'>Referral Tracking</h4>
@@ -133,18 +132,18 @@ const Dashboard = () => {
 
           <div className='w-full sm:flex justify-between items-center gap-5 mt-12'>
             <div className='sm:w-1/2 mt-3'>
-              <div className='bg-blue-950 text-white rounded-3xl  p-6 mt-3'>
+              <div className='bg-[#090d25] text-white rounded-3xl  p-6 mt-3'>
                 <p className='text-sm'>Invited</p>
                 <h4 className='font-bold'>145 people</h4>
               </div>
 
-              <div className='bg-blue-950 text-white rounded-3xl  p-6 mt-3'>
+              <div className='bg-[#090d25] text-white rounded-3xl  p-6 mt-3'>
                 <p className='text-sm'>Bonus</p>
                 <h4 className='font-bold'>1,465 </h4>
               </div>
             </div>
 
-            <div className='sm:w-1/2 mt-4'>
+            <div className='sm:w-1/2 mt-6'>
               <Tracking score={9.3} />
             </div>
           </div>
@@ -159,12 +158,11 @@ const Dashboard = () => {
       {/* --------------------Sales overview section------------------ */}
 
       <div className='grid grid-cols-12 gap-6'>
-
-        <div className='col-span-12 lg:col-span-7 p-6  mt-4  rounded-3xl  custom-gradient'>
+        <div className='col-span-12 lg:col-span-7 p-6  mt-6  rounded-3xl  custom-gradient'>
           <Salesoverview />
         </div>
 
-        <div className='col-span-12 lg:col-span-5 p-6  rounded-3xl custom-gradient mt-4 '>
+        <div className='col-span-12 lg:col-span-5 p-6  rounded-3xl custom-gradient mt-6 '>
           <div className=''>
             <ActiveUsers />
           </div>
@@ -186,10 +184,10 @@ const Dashboard = () => {
       {/* -------------------- project section------------------ */}
 
       <div className=' grid grid-cols-12 gap-6'>
-        <div className='col-span-12 lg:col-span-8 rounded-3xl custom-gradient p-6 mt-4'>
+        <div className='col-span-12 lg:col-span-8 rounded-3xl custom-gradient p-6 mt-6'>
           <Project />
         </div>
-        <div className='col-span-12 lg:col-span-4 rounded-3xl custom-gradient mt-0 md:mt-4 p-6'>
+        <div className='col-span-12 lg:col-span-4 rounded-3xl custom-gradient mt-0 md:mt-6 p-6'>
           <Order />
         </div>
       </div>

@@ -29,11 +29,11 @@ const SalesOverview = () => {
     <div className="text-white">
       <h2 className="text-xl font-semibold mb-1">Sales Overview</h2>
       <p className="text-green-400 text-sm mb-2">+5% more in 2021</p>
-      <ResponsiveContainer width="100%" height={350} className="mt-10">
+      <div className="h-[260px] sm:h-[350px]">
+      <ResponsiveContainer width="100%" height="100%" className="mt-10">
         <AreaChart 
           data={data} 
-          margin={{ top: 10, right: 0, left: 0, bottom: 0 }}
-        >
+          margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
           <defs>
             {/* Blue gradient (exact from image) */}
             <linearGradient id="gradientWebsite" x1="0" y1="0" x2="0" y2="1">
@@ -110,6 +110,7 @@ const SalesOverview = () => {
           />
         </AreaChart>
       </ResponsiveContainer>
+      </div>
     </div>
   );
 };
