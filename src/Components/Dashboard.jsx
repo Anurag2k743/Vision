@@ -121,7 +121,7 @@ const Dashboard = () => {
           <Satisfaction />
         </div>
 
-        <div className='col-span-12  xl:col-span-6 2xl:col-span-4 h-[350px]   mt-0 xl:mt-4  p-5  rounded-2xl bg-[linear-gradient(127.09deg,_rgba(6,11,40,0.94)_19.41%,_rgba(10,14,35,0.49)_76.65%)]'>
+        <div className='col-span-12  xl:col-span-6 2xl:col-span-4 sm:h-[350px]   mt-0 xl:mt-4  p-5  rounded-2xl bg-[linear-gradient(127.09deg,_rgba(6,11,40,0.94)_19.41%,_rgba(10,14,35,0.49)_76.65%)]'>
           <div className='w-full flex justify-between items-center gap-5 '>
             <div>
               <h4 className='font-bold text-[18px]'>Referral Tracking</h4>
@@ -131,8 +131,8 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className='w-full flex justify-between items-center gap-5 mt-12'>
-            <div className='w-1/2 mt-3'>
+          <div className='w-full sm:flex justify-between items-center gap-5 mt-12'>
+            <div className='sm:w-1/2 mt-3'>
               <div className='bg-blue-950 text-white rounded-3xl  p-6 mt-3'>
                 <p className='text-sm'>Invited</p>
                 <h4 className='font-bold'>145 people</h4>
@@ -144,7 +144,7 @@ const Dashboard = () => {
               </div>
             </div>
 
-            <div className='w-1/2 mt-4'>
+            <div className='sm:w-1/2 mt-4'>
               <Tracking score={9.3} />
             </div>
           </div>
