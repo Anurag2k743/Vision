@@ -34,14 +34,13 @@ const Information = () => {
         {billingData.map((item) => (
           <li
             key={item.id}
-            className="[&:nth-child(-n+2)]:mb-10 mt-6 bg-[linear-gradient(127.09deg,_rgba(24,29,60,0.94)_19.41%,_rgba(10,14,35,0.49)_76.65%)] p-6 rounded-2xl"
-          >
+            className="[&:nth-child(-n+2)]:mb-10 mt-6 bg-[linear-gradient(127.09deg,_rgba(24,29,60,0.94)_19.41%,_rgba(10,14,35,0.49)_76.65%)] p-6 rounded-2xl">
             <div className="flex justify-between items-center">
               <div>
                 <h3 className="text-sm">{item.name}</h3>
               </div>
               <div className="flex justify-between items-center gap-6">
-                <button className="uppercase flex items-center text-xs text-[#E31A1A]">
+                <button className="uppercase flex items-center text-xs text-[#E31A1A] transform transition-transform duration-300 hover:scale-95 hover:text-red-400">
                   <MdDelete className="mr-1" /> Delete
                 </button>
                 <button className="uppercase flex items-center text-xs font-bold">

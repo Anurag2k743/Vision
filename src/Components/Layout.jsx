@@ -26,7 +26,7 @@ const Layout = () => {
       </div>
      
       }
-      <div className={shouldShowSidebar ? 'mt-7 sm:mt-0 p-5 w-full' : 'p-5 w-full'}>
+      <div className={shouldShowSidebar ? 'mt-7 sm:mt-0 p-5 w-full' : 'w-full'}>
         <Routes>
           {/* Redirect root to /Dashboard */}
           <Route path="/" element={<Navigate to="/Dashboard" replace />} />
