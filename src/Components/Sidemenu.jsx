@@ -19,7 +19,7 @@ const Sidemenu = () => {
   ];
 
   const accountItems = [
-    { to: '/profile', label: 'Profile', icon: FaUser },
+    { to: '/', label: 'Profile', icon: FaUser },
     { to: '/Signin', label: 'Sign In', icon: MdAssignment },
     { to: '/Signup', label: 'Sign Up', icon: HiMiniWrenchScrewdriver },
   ];

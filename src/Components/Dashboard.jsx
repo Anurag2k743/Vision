@@ -52,9 +52,9 @@ const Dashboard = () => {
       <div className='grid  sm:grid-cols-2  xl:grid-cols-4  gap-6 mt-[90px]'>
         <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl flex justify-between '>
           <div className=''>
-            <h6 className='text-[12px]'>Todays Money</h6>
+            <h6 className='text-[12px] text-[#A0AEC0] font-semibold'>Todays Money</h6>
             <span className='font-bold text-[20px]'>$53,000 </span>
-            <span className='text-[#01b574] text-[20px]'>+55%</span>
+            <span className='text-[#01b574] text-[14px] font-bold'>+55%</span>
           </div>
           <div>
             <MdDriveFileMove className='h-10 w-10 p-2 text-[#ffffff] bg-[#0075ff] rounded-lg' />
@@ -63,9 +63,9 @@ const Dashboard = () => {
 
         <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl   flex justify-between'>
           <div className=''>
-            <h6 className='text-[12px]'>Today's users</h6>
+            <h6 className='text-[12px] text-[#A0AEC0] font-semibold'>Today's users</h6>
             <span className='font-bold text-[20px]'>2,300 </span>
-            <span className='text-[#01b574] text-[20px]'>+3%</span>
+            <span className='text-[#01b574] text-[14px] font-bold'>+3%</span>
           </div>
           <div>
             <BsGlobe2 className='h-10 w-10 p-2 text-[#ffffff] bg-[#0075ff] rounded-lg' />
@@ -74,9 +74,9 @@ const Dashboard = () => {
 
         <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl  flex justify-between'>
           <div className=''>
-            <h6 className='text-[12px]'>New clients</h6>
+            <h6 className='text-[12px] text-[#A0AEC0] font-semibold'>New clients</h6>
             <span className='font-bold text-[20px]'>+3,462 </span>
-            <span className='text-red-600 text-[20px]'>+2%</span>
+            <span className='text-red-600 text-[14px] font-bold'>+2%</span>
           </div>
           <div>
             <FaFileAlt className='h-10 w-10 p-2 text-[#ffffff] bg-[#0075ff] rounded-lg' />
@@ -85,9 +85,9 @@ const Dashboard = () => {
 
         <div className='bg-[#0a0e29] px-6 py-4 rounded-3xl  flex justify-between'>
           <div className=''>
-            <h6 className='text-[12px]'>Total Sales</h6>
+            <h6 className='text-[12px] text-[#A0AEC0] font-semibold'>Total Sales</h6>
             <span className='font-bold text-[20px]'>$103,430 </span>
-            <span className='text-[#01b574] text-[20px]'>+5%</span>
+            <span className='text-[#01b574] text-[14px] font-bold'>+5%</span>
           </div>
           <div>
             <FaCartPlus className='h-10 w-10 p-2 text-[#ffffff] bg-[#0075ff] rounded-lg' />
@@ -104,7 +104,7 @@ const Dashboard = () => {
           <div className=''>
             <h6 className='text-[14px]'>Welcome back,</h6>
             <h2 className='text-[30px] font-bold'>Mark Johnson</h2>
-            <p className='text-[14px] my-3'>Glad to see you again!
+            <p className='text-[14px] text-[#A0AEC0] font-semibold my-3'>Glad to see you again!
               <br />Ask me anything.</p>
           </div>
           <div className='mt-16 sm:mt-40'>
@@ -115,7 +115,7 @@ const Dashboard = () => {
         <div className='col-span-12 xl:col-span-6 2xl:col-span-3 h-[310px] sm:h-[350px] mt-0 xl:mt-6  p-5  rounded-2xl bg-[#0d102d]'>
           <div className='pb-4 '>
             <h4 className='font-bold text-[18px]'>Satisfaction Rate</h4>
-            <h6 className='text-[14px]'>From all projects</h6>
+            <h6 className='text-[14px] text-[#A0AEC0] font-semibold'>From all projects</h6>
           </div>
           <Satisfaction />
         </div>
@@ -133,12 +133,12 @@ const Dashboard = () => {
           <div className='w-full sm:flex justify-between items-center gap-5 mt-12'>
             <div className='sm:w-1/2 mt-3'>
               <div className='bg-[#090d25] text-white rounded-3xl  p-6 mt-3'>
-                <p className='text-sm'>Invited</p>
+                <p className='text-sm text-[#A0AEC0] font-semibold'>Invited</p>
                 <h4 className='font-bold'>145 people</h4>
               </div>
 
               <div className='bg-[#090d25] text-white rounded-3xl  p-6 mt-3'>
-                <p className='text-sm'>Bonus</p>
+                <p className='text-sm text-[#A0AEC0] font-semibold'>Bonus</p>
                 <h4 className='font-bold'>1,465 </h4>
               </div>
             </div>
@@ -169,8 +169,8 @@ const Dashboard = () => {
 
           <div className='my-5'>
             <h4>Active Users</h4>
-            <span className='text-[#01b574] '>(+23)</span>
-            <span className='font-bold'> Than last Week</span>
+            <span className='text-[#01b574] text-sm'>(+23)</span>
+            <span className='text-[#A0AEC0] text-sm font-semibold'> Than last Week</span>
           </div>
 
           <div>

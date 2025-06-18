@@ -28,7 +28,7 @@ const SalesOverview = () => {
   return (
     <div className="text-white">
       <h2 className="text-xl font-semibold mb-1">Sales Overview</h2>
-      <p className="text-green-400 text-sm mb-2">+5% more in 2021</p>
+      <p className="text-green-400 text-sm mb-2">+5% more <span className="text-[#A0AEC0] font-semibold">in 2021</span></p>
       <div className="h-[260px] sm:h-[350px]">
       <ResponsiveContainer width="100%" height="100%" className="mt-10">
         <AreaChart 
