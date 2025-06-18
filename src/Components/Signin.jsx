@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaUserAlt, FaUserCircle } from "react-icons/fa";
 import { MdKey } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
+import Mobilemenu from './formmenu/mobilemenu';
 
 const Signin = () => {
   const [darkMode, setDarkMode] = useState(true); // Toggle state
@@ -14,14 +15,14 @@ const Signin = () => {
         <div className=''>
           <div className='grid grid-cols-1 lg:grid-cols-2 min-h-screen'>
             {/* Left Side - Banner */}
-            <div className='min-h-[300px] flex flex-col justify-center items-center bg-cover bg-center bg-[url(/singin.webp)] p-4 text-center'>
+            <div className='min-h-[400px] flex flex-col justify-center items-center bg-cover bg-center bg-[url(/singin.webp)] p-4 text-center'>
               <h4 className='text-lg sm:text-xl tracking-[4px] sm:tracking-[8px] font-bold text-white'>INSPIRED BY THE FUTURE:</h4>
               <h2 className='text-2xl sm:text-4xl tracking-[4px] sm:tracking-[8px] mt-4 font-bold text-white'>THE VISION UI DASHBOARD</h2>
             </div>
 
             {/* Right Side - Sign In Form */}
             <div className='bg-[#080c2c] flex flex-col justify-center p-6'>
-              <div className='w-full max-w-xs lg:ml-24'>
+              <div className='w-full max-w-xs mx-auto lg:ml-24'>
                 <h3 className='text-2xl sm:text-3xl font-bold text-white'>Nice to see you!</h3>
                 <p className='text-sm mt-3 text-[#a0aec0]'>Enter your email and password to sign in</p>
 
@@ -93,7 +94,13 @@ const Signin = () => {
           </div>
         </div> 
 
-        
+         {/* MOBILE MENU */}
+
+        <div>
+          <div className='xl:hidden w-full max-w-sm  md:max-w-[600px]   left-0  absolute right-0 top-4 z-50 mx-auto py-4 px-6 rounded-3xl border border-[#E2E8F04D] shadow-[0rem_0.25rem_0.375rem_-0.0625rem_rgba(20,20,20,0.12),0rem_0.125rem_0.25rem_-0.0625rem_rgba(20,20,20,0.07)] backdrop-blur-[42px]'>
+            <Mobilemenu />
+          </div>
+        </div>
       </div>
     </>
   );

@@ -5,19 +5,17 @@ import { NavLink } from 'react-router-dom';
 import { BsFacebook } from "react-icons/bs";
 import { IoLogoGoogle } from "react-icons/io";
 import { SiApple } from "react-icons/si";
-
+import Mobilemenu from './formmenu/mobilemenu';
 const Signin = () => {
   const [darkMode, setDarkMode] = useState(true); // Toggle state
-
   return (
     <>
       <div className=' min-h-screen w-full'>
-
         {/* Main Content Area */}
         <div className='relative'>
           <div className='grid grid-cols-1 lg:grid-cols-2 '>
             {/* Left Side - Banner */}
-            <div className='min-h-[300px] flex flex-col justify-center items-center bg-cover bg-center bg-[url(/singin.webp)] p-4 text-center'>
+            <div className='min-h-[400px] flex flex-col justify-center items-center bg-cover bg-center bg-[url(/singin.webp)] p-4 text-center'>
               <h4 className='text-lg sm:text-xl tracking-[4px] sm:tracking-[8px] font-bold text-white'>INSPIRED BY THE FUTURE:</h4>
               <h2 className='text-2xl sm:text-4xl tracking-[4px] sm:tracking-[8px] mt-4 font-bold text-white'>THE VISION UI DASHBOARD</h2>
             </div>
@@ -124,6 +122,14 @@ const Signin = () => {
             <div className='col-span-3 flex justify-end'>
               <button className='text-xs py-3 font-bold px-6 rounded-xl bg-[#0075ff] text-white'>Buy Now</button>
             </div>
+          </div>
+        </div>
+
+        {/* MOBILE MENU */}
+
+        <div>
+          <div className='xl:hidden w-full max-w-sm  md:max-w-[600px]   left-0  absolute right-0 top-4 z-50 mx-auto py-4 px-6 rounded-3xl border border-[#E2E8F04D] shadow-[0rem_0.25rem_0.375rem_-0.0625rem_rgba(20,20,20,0.12),0rem_0.125rem_0.25rem_-0.0625rem_rgba(20,20,20,0.07)] backdrop-blur-[42px]'>
+            <Mobilemenu />
           </div>
         </div>
 

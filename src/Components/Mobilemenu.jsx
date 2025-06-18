@@ -29,11 +29,11 @@ const Sidemenu = () => {
     { to: '/Dashboard', label: 'Dashboard', icon: FaHome },
     { to: '/table', label: 'Table', icon: VscGraph },
     { to: '/billing', label: 'Billing', icon: FaMoneyBills },
-    { to: '/rtl', label: 'Rtl', icon: IoIosRocket },
+    { to: '/', label: 'Rtl', icon: IoIosRocket },
   ];
 
   const accountItems = [
-    { to: '/profile', label: 'Profile', icon: FaUser },
+    { to: '/', label: 'Profile', icon: FaUser },
     { to: '/Signin', label: 'Sign In', icon: MdAssignment },
     { to: '/Signup', label: 'Sign Up', icon: HiMiniWrenchScrewdriver },
   ];
