@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { FaHome } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
+import { FiArrowRight } from "react-icons/fi";
+
 import { IoSettingsSharp } from "react-icons/io5";
 import { FaBell } from "react-icons/fa6";
 import { MdDriveFileMove } from "react-icons/md";
@@ -108,7 +110,7 @@ const Dashboard = () => {
               <br />Ask me anything.</p>
           </div>
           <div className='mt-16 sm:mt-40'>
-            <button className='text-[14px]'>Tap to Record</button>
+            <button className='text-[14px] flex items-center gap-2'>Tap to Record <FiArrowRight fontSize={16} className='hover:ml-2 hover:duration-300 hover:ease-in-out'/></button>
           </div>
         </div>
 
@@ -147,13 +149,10 @@ const Dashboard = () => {
               <Tracking score={9.3} />
             </div>
           </div>
-
         </div>
-
       </div>
 
       {/* ------------------Mark Johnson---------------- */}
-
 
       {/* --------------------Sales overview section------------------ */}
 
@@ -166,18 +165,15 @@ const Dashboard = () => {
           <div className=''>
             <ActiveUsers />
           </div>
-
           <div className='my-5'>
             <h4>Active Users</h4>
             <span className='text-[#01b574] text-sm'>(+23)</span>
             <span className='text-[#A0AEC0] text-sm font-semibold'> Than last Week</span>
           </div>
-
           <div>
             <Users />
           </div>
         </div>
-
       </div>
 
       {/* --------------------Sales overview section------------------ */}
