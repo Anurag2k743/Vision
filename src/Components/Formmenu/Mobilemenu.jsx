@@ -1,7 +1,7 @@
 import { IoMenu } from "react-icons/io5";
 import { NavLink } from 'react-router-dom';
 
-const mobilemenu = () => {
+const Mobilemenu = () => {
     return (
         <div>
             <div className='flex justify-between items-center'>
@@ -12,4 +12,4 @@ const mobilemenu = () => {
     )
 }
 
-export default mobilemenu
+export default Mobilemenu
