@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { FaUserAlt, FaUserCircle } from "react-icons/fa";
 import { MdKey } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
@@ -9,7 +8,7 @@ const Signin = () => {
   return (
     <>
       <div className='relative min-h-screen w-full'>
-      
+
         {/* Main Content Area */}
         <div className=''>
           <div className='grid grid-cols-1 lg:grid-cols-2 min-h-screen'>
@@ -77,20 +76,20 @@ const Signin = () => {
           </div>
         </div>
 
-     {/* Fixed Navigation Bar */}
-         <div className='hidden lg:block w-full max-w-[1024px]  left-0  absolute right-0 top-4 z-50 mx-auto py-4 px-6 rounded-3xl border border-[#E2E8F04D] shadow-[0rem_0.25rem_0.375rem_-0.0625rem_rgba(20,20,20,0.12),0rem_0.125rem_0.25rem_-0.0625rem_rgba(20,20,20,0.07)] backdrop-blur-[42px]'>
+        {/* Fixed Navigation Bar */}
+        <div className='hidden lg:block w-full max-w-[1024px]  left-0  absolute right-0 top-4 z-50 mx-auto py-4 px-6 rounded-3xl border border-[#E2E8F04D] shadow-[0rem_0.25rem_0.375rem_-0.0625rem_rgba(20,20,20,0.12),0rem_0.125rem_0.25rem_-0.0625rem_rgba(20,20,20,0.07)] backdrop-blur-[42px]'>
           <div className='grid grid-cols-12 items-center'>
             <div className='col-span-4 text-white font-bold'><NavLink to="/Dashboard" className="flex items-center gap-2 text-sm">VISION UI FREE</NavLink></div>
             <div className='col-span-5 flex justify-between gap-6 text-white'>
               <NavLink to="/Dashboard" className="flex items-center gap-2 text-sm">
-               <svg
+                <svg
                   width="16px"
                   height="16px"
                   viewBox="0 0 24 24"
                   fill="currentColor" >
                   <path d="M12.002 0C5.37 0 0 5.373 0 12c0 6.627 5.37 12 12.002 12 6.63 0 12-5.373 12-12 0-6.627-5.37-12-12-12zm0 3.74a8.25 8.25 0 0 1 5.89 14.14 8.252 8.252 0 0 1-11.782-11.78A8.222 8.222 0 0 1 12 3.74zm0 2.613a5.626 5.626 0 0 0-3.986 1.652 5.626 5.626 0 0 0 0 7.972 5.626 5.626 0 0 0 9.435-3.986A5.626 5.626 0 0 0 12 6.353z" />
                 </svg>
-              Dashboard</NavLink>
+                Dashboard</NavLink>
               <NavLink to="/" className="flex items-center gap-2 text-sm"> <FaUserAlt fontSize={16} />Profile</NavLink>
               <NavLink to="/Signup" className="flex items-center gap-2 text-sm"> <FaUserCircle fontSize={16} />Sign Up</NavLink>
               <NavLink to="/Signin" className="flex items-center gap-2 text-sm"> <MdKey fontSize={16} />Sign In</NavLink>
@@ -99,13 +98,12 @@ const Signin = () => {
               <button className='text-xs py-3 font-bold px-6 rounded-xl bg-[#0075ff] text-white'>Buy Now</button>
             </div>
           </div>
-        </div> 
+        </div>
 
-         {/* MOBILE MENU */}
+        {/* MOBILE MENU */}
 
         <div>
           <div className='xl:hidden w-full max-w-sm  md:max-w-[600px]   left-0  absolute right-0 top-4 z-50 mx-auto py-4 px-6 rounded-3xl border border-[#E2E8F04D] shadow-[0rem_0.25rem_0.375rem_-0.0625rem_rgba(20,20,20,0.12),0rem_0.125rem_0.25rem_-0.0625rem_rgba(20,20,20,0.07)] backdrop-blur-[42px]'>
-            {/* <Mobilemenu/> */}
           </div>
         </div>
       </div>
