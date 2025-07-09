@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 import { BsFacebook } from "react-icons/bs";
 import { IoLogoGoogle } from "react-icons/io";
 import { SiApple } from "react-icons/si";
-import Mobilemenu from '../Formmenu/Mobilemenu';
 const Signin = () => {
   const [darkMode, setDarkMode] = useState(true); // Toggle state
   return (
@@ -137,7 +136,7 @@ const Signin = () => {
 
         <div>
           <div className='xl:hidden w-full max-w-sm  md:max-w-[600px]   left-0  absolute right-0 top-4 z-50 mx-auto py-4 px-6 rounded-3xl border border-[#E2E8F04D] shadow-[0rem_0.25rem_0.375rem_-0.0625rem_rgba(20,20,20,0.12),0rem_0.125rem_0.25rem_-0.0625rem_rgba(20,20,20,0.07)] backdrop-blur-[42px]'>
-            <Mobilemenu/>
+            {/* <Mobilemenu/> */}
           </div>
         </div>
 
