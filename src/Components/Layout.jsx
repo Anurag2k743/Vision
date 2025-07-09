@@ -9,12 +9,11 @@ import Sidemenu from './Sidemenu';
 import Profile from './Profile';
 import Signin from './Signin';
 import Signup from './Signup';
-import { div } from 'framer-motion/client';
+import HeaderLayout from './HeaderLayout';
 
 const Layout = () => {
   const location = useLocation();
 
-  // Define routes where sidebar should NOT be shown
   const noSidebarRoutes = ['/Signin', '/Signup'];
   const shouldShowSidebar = !noSidebarRoutes.includes(location.pathname);
 
@@ -27,10 +26,10 @@ const Layout = () => {
      
       }
       <div className={shouldShowSidebar ? 'mt-7 sm:mt-0 p-5 w-full' : 'w-full'}>
+        <HeaderLayout/>
         <Routes>
           {/* Redirect root to /Dashboard */}
           <Route path="/" element={<Navigate to="/Dashboard" replace />} />
-
           {/* Authenticated routes */}
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/Rtl" element={<Rtl />} />

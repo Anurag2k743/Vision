@@ -1,11 +1,5 @@
-"Use client";
-import React, { useEffect, useState } from 'react';
-import { FaHome } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
-import { FiArrowRight } from "react-icons/fi";
 
-import { IoSettingsSharp } from "react-icons/io5";
-import { FaBell } from "react-icons/fa6";
+import { FiArrowRight } from "react-icons/fi";
 import { MdDriveFileMove } from "react-icons/md";
 import { BsGlobe2 } from "react-icons/bs";
 import { FaFileAlt } from "react-icons/fa";
@@ -18,37 +12,14 @@ import ActiveUsers from './Dashbord/ActiveUsers';
 import Users from './Dashbord/Users';
 import Project from './Dashbord/Project';
 import Order from './Dashbord/Order';
-import Navbar from './Dashbord/Navbar';
-
-
-
 
 const Dashboard = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20); // adjust scroll threshold if needed
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
 
   return (
     <>
-      {/* -------------Header section------------ */}
-
-  <header
-    className={`fixed border  left-2 right-2 top-2 md:left-[280px] md:right-5 z-50  rounded-3xl transition-all duration-300 
-      ${isScrolled ? 'border border-[#ffffff] backdrop-blur-xl' : 'border-none backdrop-blur-none'}
-    `}>
-    <Navbar />
-  </header>
-
-
-      {/* -------------Header section------------ */}
-
+  
       {/* -----------------today's money---------------- */}
 
       <div className='grid  sm:grid-cols-2  xl:grid-cols-4  gap-6 mt-[90px]'>
@@ -189,8 +160,6 @@ const Dashboard = () => {
       </div>
 
       {/* -------------------- project section------------------ */}
-
-
 
 
     </>

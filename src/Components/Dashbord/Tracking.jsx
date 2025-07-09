@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Tracking = ({ score = 9.3, maxScore = 10 }) => {
-    const percentage = (score / maxScore) * 100;
+    const percentage = (score / maxScore) * 80;
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
@@ -12,7 +12,7 @@ const Tracking = ({ score = 9.3, maxScore = 10 }) => {
     }, [percentage]);
 
     const radius = 100;
-    const stroke = 12;
+    const stroke = 16;
     const normalizedRadius = radius - stroke * 0.5;
     const circumference = normalizedRadius * 2 * Math.PI;
     const strokeDashoffset = circumference - (progress / 100) * circumference;
